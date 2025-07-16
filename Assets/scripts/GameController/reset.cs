@@ -17,7 +17,7 @@ public class reset : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            SceneManager.LoadScene(nameScene);
+          //  SceneManager.LoadScene(nameScene);
         }
         else
         {

@@ -7,6 +7,7 @@ public class RespawnBeacon : MonoBehaviour
     private RespawnPoint respawnPointScript;
     public Transform positionBack;
     public GameObject beaconEffects;
+    
 
     private void Start()
     {
@@ -22,7 +23,7 @@ public class RespawnBeacon : MonoBehaviour
             if(respawnPointScript != null)
             {
                 beaconEffects.gameObject.SetActive(true);
-                respawnPointScript.SetRespawn(positionBack);
+                respawnPointScript.SetRespawn(positionBack,beaconEffects);
             }
         }
     }

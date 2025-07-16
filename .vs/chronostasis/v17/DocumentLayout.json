@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5093FE-1600-5572-CCA5-34E8036C14A1}|Assembly-CSharp.csproj|c:\\users\\evech\\documents\\mathieugames\\chronostasis\\assets\\scripts\\gamecontroller\\laser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5093FE-1600-5572-CCA5-34E8036C14A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamecontroller\\laser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5093FE-1600-5572-CCA5-34E8036C14A1}|Assembly-CSharp.csproj|C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\assets\\scripts\\gamecontroller\\respawnpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5093FE-1600-5572-CCA5-34E8036C14A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamecontroller\\respawnpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5093FE-1600-5572-CCA5-34E8036C14A1}|Assembly-CSharp.csproj|C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\assets\\scripts\\objects\\tp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5093FE-1600-5572-CCA5-34E8036C14A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\objects\\tp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5093FE-1600-5572-CCA5-34E8036C14A1}|Assembly-CSharp.csproj|c:\\users\\evech\\documents\\mathieugames\\chronostasis\\assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5093FE-1600-5572-CCA5-34E8036C14A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5093FE-1600-5572-CCA5-34E8036C14A1}|Assembly-CSharp.csproj|C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\assets\\scripts\\player\\selecting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5093FE-1600-5572-CCA5-34E8036C14A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\selecting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5093FE-1600-5572-CCA5-34E8036C14A1}|Assembly-CSharp.csproj|c:\\users\\evech\\documents\\mathieugames\\chronostasis\\assets\\scripts\\objects\\platforms\\platformmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5093FE-1600-5572-CCA5-34E8036C14A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\objects\\platforms\\platformmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5093FE-1600-5572-CCA5-34E8036C14A1}|Assembly-CSharp.csproj|c:\\users\\evech\\documents\\mathieugames\\chronostasis\\assets\\scripts\\objects\\platforms\\makeplatmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5093FE-1600-5572-CCA5-34E8036C14A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\objects\\platforms\\makeplatmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5093FE-1600-5572-CCA5-34E8036C14A1}|Assembly-CSharp.csproj|C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\assets\\scripts\\gamecontroller\\changescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5093FE-1600-5572-CCA5-34E8036C14A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamecontroller\\changescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Laser.cs",
+              "DocumentMoniker": "C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\Assets\\scripts\\GameController\\Laser.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\GameController\\Laser.cs",
+              "ToolTip": "C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\Assets\\scripts\\GameController\\Laser.cs",
+              "RelativeToolTip": "Assets\\scripts\\GameController\\Laser.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAWwEYAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T19:56:08.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "playerMovement.cs",
+              "DocumentMoniker": "C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\Assets\\scripts\\player\\playerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\player\\playerMovement.cs",
+              "ToolTip": "C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\Assets\\scripts\\player\\playerMovement.cs",
+              "RelativeToolTip": "Assets\\scripts\\player\\playerMovement.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAqwIcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T17:27:30.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Selecting.cs",
+              "DocumentMoniker": "C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\Assets\\scripts\\player\\Selecting.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\player\\Selecting.cs",
+              "ToolTip": "C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\Assets\\scripts\\player\\Selecting.cs",
+              "RelativeToolTip": "Assets\\scripts\\player\\Selecting.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAgwJYAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T21:55:08.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MakePlatMove.cs",
+              "DocumentMoniker": "C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\Assets\\scripts\\Objects\\Platforms\\MakePlatMove.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Objects\\Platforms\\MakePlatMove.cs",
+              "ToolTip": "C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\Assets\\scripts\\Objects\\Platforms\\MakePlatMove.cs",
+              "RelativeToolTip": "Assets\\scripts\\Objects\\Platforms\\MakePlatMove.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T17:27:08.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlatformMove.cs",
+              "DocumentMoniker": "C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\Assets\\scripts\\Objects\\Platforms\\PlatformMove.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Objects\\Platforms\\PlatformMove.cs",
+              "ToolTip": "C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\Assets\\scripts\\Objects\\Platforms\\PlatformMove.cs",
+              "RelativeToolTip": "Assets\\scripts\\Objects\\Platforms\\PlatformMove.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAuwCcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T17:26:39.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Tp.cs",
+              "DocumentMoniker": "C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\Assets\\scripts\\Objects\\Tp.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Objects\\Tp.cs",
+              "ToolTip": "C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\Assets\\scripts\\Objects\\Tp.cs",
+              "RelativeToolTip": "Assets\\scripts\\Objects\\Tp.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwC0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T17:13:23.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ChangeScene.cs",
+              "DocumentMoniker": "C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\Assets\\scripts\\GameController\\ChangeScene.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\GameController\\ChangeScene.cs",
+              "ToolTip": "C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\Assets\\scripts\\GameController\\ChangeScene.cs",
+              "RelativeToolTip": "Assets\\scripts\\GameController\\ChangeScene.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T20:09:42.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RespawnPoint.cs",
+              "DocumentMoniker": "C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\Assets\\scripts\\GameController\\RespawnPoint.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\GameController\\RespawnPoint.cs",
+              "ToolTip": "C:\\Users\\evech\\Documents\\MathieuGames\\Chronostasis\\Assets\\scripts\\GameController\\RespawnPoint.cs",
+              "RelativeToolTip": "Assets\\scripts\\GameController\\RespawnPoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T17:27:48.574Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

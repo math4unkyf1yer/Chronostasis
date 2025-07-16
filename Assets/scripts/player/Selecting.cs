@@ -20,7 +20,10 @@ public class Selecting : MonoBehaviour
     private GameObject rewindingObject = null;
     private ColorGrading colorGrading;
 
+    private string saveTypeRb;
+
     [Header("Grabbing")]
+    public GameObject objectOn;
     private GameObject grabbedObject;
     public bool isGrabbing;
     public bool cannotGrabble = false;
@@ -145,8 +148,13 @@ public class Selecting : MonoBehaviour
     {
         if(grabbedObject != null)
         {
-            if (grabbedObject.CompareTag("notGrab"))
+            if (grabbedObject.CompareTag("notGrab") || grabbedObject == objectOn)
+            {
+                //remove line renderer 
+                isGrabbing = false;
+                BeamDeactive();
                 return; // Prevent grabbing
+            }
             if (Input.GetMouseButton(0) && !cannotGrabble)
             {
                 if (cannotGrabble == true)
@@ -251,8 +259,16 @@ public class Selecting : MonoBehaviour
         grayscaleVolume.enabled = true;
 
         //make it kinematic 
-        grabbedRigid.useGravity = false;
-        grabbedRigid.isKinematic = true;
+        if (grabbedRigid.useGravity)
+        {
+            saveTypeRb = "Gravity";
+            grabbedRigid.useGravity = false;
+            grabbedRigid.isKinematic = true;
+        }
+        else
+        {
+            saveTypeRb = "Kinematic";
+        }
         TrailRenderer objTrailRenderer = hitObject.GetComponent<TrailRenderer>();
         LineRenderer objLineRend = hitObject.GetComponent<LineRenderer>();
 
@@ -298,21 +314,21 @@ public class Selecting : MonoBehaviour
     }
     void CheckGravOrKin()
     {
-        if(grabbedObject.tag == "Platform")
-        {
-          //nothing
-        }
-        else
+        if(saveTypeRb == "Gravity")
         {
             grabbedRigid.useGravity = true;
             grabbedRigid.isKinematic = false;
+        }
+        else
+        {
+            //nothing
         }
         grabbedObject = null;
         grabbedRigid = null;
     }
     void checkIfPlatform(GameObject hitObject)
     {
-        if (hitObject.tag == "Platform" || hitObject.tag == "PlatformG")
+        if (hitObject.GetComponent<PlatformMove>() != null)
             platformScript = hitObject.GetComponent<PlatformMove>();
 
         if (platformScript != null)
@@ -394,6 +410,7 @@ public class Selecting : MonoBehaviour
             }
             CheckGravOrKin();
             StartCoroutine(CooldownRewind());
+
 
         }
     }

@@ -10,6 +10,7 @@ TagManager:
   - notGrab
   - Laser
   - PlatformG
+  - KeyHold
   layers:
   - Default
   - TransparentFX

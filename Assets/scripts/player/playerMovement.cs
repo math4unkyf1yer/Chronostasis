@@ -38,6 +38,10 @@ public class PlayerMovement : MonoBehaviour
 
     public bool running;
 
+    //for platforms 
+    private PlatformMove currentPlatform = null;
+    public float rayLength = 1.1f;
+
     void Start()
     {
         //   staminaSlider = GameObject.Find("StaminaSlider").GetComponent<Slider>();
@@ -60,7 +64,8 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-            MovePlayer();  
+       MovePlayer();
+        IsPlayerOnPlat();
     }
 
     private void GetInput()
@@ -106,33 +111,82 @@ public class PlayerMovement : MonoBehaviour
         return Physics.Raycast(groundCheck.position, Vector3.down, 0.3f, groundMask);
     }
 
+    void IsPlayerOnPlat()
+    {
+        Ray ray = new Ray(transform.position, Vector3.down);
+        RaycastHit hit;
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.layer == 6 || collision.gameObject.layer == 7)
+        if (Physics.Raycast(ray, out hit, rayLength))
         {
-            Debug.Log("asdsds");
-            selectingScript.cannotGrabble = true;
-            if (collision.gameObject.tag == "Platform" || collision.gameObject.tag == "PlatformG")
+            GameObject hitObject = hit.collider.gameObject;
+
+            if (hitObject.GetComponent<PlatformMove>() != null)
             {
-                platScript = collision.gameObject.GetComponent<PlatformMove>();
-                platScript.PlayerOnObject();
+                PlatformMove platform = hitObject.GetComponent<PlatformMove>();
+
+                if (platform != null)
+                {
+                    // If we have a new platform detected
+                    if (currentPlatform != platform)
+                    {
+                        // If previously on another platform, notify it we left
+                        if (currentPlatform != null)
+                            currentPlatform.PlayerOffObject();
+
+                        currentPlatform = platform;
+                        selectingScript.objectOn = hitObject;
+                        currentPlatform.PlayerOnObject();
+                    }
+                    // else still on same platform, do nothing
+                }
+            }
+            else
+            {
+                // Hit something, but not platform
+                ClearCurrentPlatform();
             }
         }
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.layer == 6 || collision.gameObject.layer == 7)
+        else
         {
-            Debug.Log("Exit");
-            selectingScript.cannotGrabble = false;
-            if (collision.gameObject.tag == "Platform" || collision.gameObject.tag == "PlatformG")
-            {
-                platScript = collision.gameObject.GetComponent<PlatformMove>();
-                platScript.PlayerOffObject();
-            }
+            // Nothing detected below player within rayLength
+            ClearCurrentPlatform();
         }
     }
+    private void ClearCurrentPlatform()
+    {
+        if (currentPlatform != null)
+        {
+            currentPlatform.PlayerOffObject();
+            currentPlatform = null;
+            selectingScript.objectOn = null;
+        }
+    }
+    /*  private void OnCollisionEnter(Collision collision)
+      {
+          if (collision.gameObject.layer == 6 || collision.gameObject.layer == 7)
+          {
+              Debug.Log("asdsds");
+              selectingScript.cannotGrabble = true;
+              if (collision.gameObject.tag == "Platform" || collision.gameObject.tag == "PlatformG")
+              {
+                  platScript = collision.gameObject.GetComponent<PlatformMove>();
+                  platScript.PlayerOnObject();
+              }
+          }
+      }
+      private void OnCollisionExit(Collision collision)
+      {
+          if (collision.gameObject.layer == 6 || collision.gameObject.layer == 7)
+          {
+              Debug.Log("Exit");
+              selectingScript.cannotGrabble = false;
+              if (collision.gameObject.tag == "Platform" || collision.gameObject.tag == "PlatformG")
+              {
+                  platScript = collision.gameObject.GetComponent<PlatformMove>();
+                  platScript.PlayerOffObject();
+              }
+          }
+      }*/
 
     /* private void HandleStamina()
      {
