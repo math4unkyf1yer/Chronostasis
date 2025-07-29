@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brightYellow: {fileID: 2100000, guid: 90af6213e9f639d469199e75595e81ea, type: 2}
+  brightPurple: {fileID: 2100000, guid: 7100a4525b4712746bf6bf135ac0c10e, type: 2}
 --- !u!114 &7526641430358457367
 MonoBehaviour:
   m_ObjectHideFlags: 0

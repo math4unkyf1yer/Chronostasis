@@ -7,6 +7,7 @@ public class OutlineHighlighter : MonoBehaviour
     private Renderer rend;
     private Material originalMaterial;
     public Material brightYellow;
+    public Material brightPurple;
     private Outline outlineScript;
   //  public Material highlightMaterial;
 
@@ -35,11 +36,14 @@ public class OutlineHighlighter : MonoBehaviour
             outlineScript.enabled = false;
         }
     }
-    public void selectedHighlight()
+    public void selectedHighlight(string color)
     {
-        if (rend != null)
+        if (rend != null && color == "yellow")
         {
             rend.material = brightYellow;
+        }else if(rend != null && color == "purple")
+        {
+            rend.material = brightPurple;
         }
     }
     public void UnselectedHighlight()

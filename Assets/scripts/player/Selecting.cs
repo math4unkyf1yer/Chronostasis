@@ -15,10 +15,15 @@ public class Selecting : MonoBehaviour
 
     public PostProcessVolume grayscaleVolume;
     private bool isGrayscale = false;
+
     private bool isRewinding = false;
     private Coroutine rewindCoroutine = null;
     private GameObject rewindingObject = null;
     private ColorGrading colorGrading;
+
+    [Header("Swap")]
+    public bool swap;
+    private GameObject player;
 
     private string saveTypeRb;
 
@@ -48,6 +53,7 @@ public class Selecting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
         maxDistance = lineLength;
         if (lineRenderer == null)
             lineRenderer = GetComponent<LineRenderer>();
@@ -121,9 +127,21 @@ public class Selecting : MonoBehaviour
                 {
                     grabbedObject = target;
                     grabbedRigid = grabbedObject.GetComponent<Rigidbody>();
-                    lastHighlighted.selectedHighlight();
-                    target.layer = LayerMask.NameToLayer("Highlighted");
-                    StartCoroutine(ApplyGrayscale(lastHighlighted, target));
+                    if(swap == false)
+                    {
+                        lastHighlighted.selectedHighlight("yellow");
+                        target.layer = LayerMask.NameToLayer("Highlighted");
+                        StartCoroutine(ApplyGrayscale(lastHighlighted, target));
+                    }
+                    else
+                    {
+                        if (!grabbedObject.CompareTag("notGrab"))
+                        {
+                            lastHighlighted.selectedHighlight("purple");
+                            target.layer = LayerMask.NameToLayer("Highlighted");
+                            StartCoroutine(SwapStart(target, lastHighlighted));
+                        }
+                    }
                 }
             }
             else
@@ -413,6 +431,28 @@ public class Selecting : MonoBehaviour
 
 
         }
+    }
+
+    // SWAP POWERS
+
+    IEnumerator SwapStart(GameObject hitobject, OutlineHighlighter outlineScript)
+    {
+        GameObject swapObject = hitobject;
+        selectedObject = true;
+        isGrayscale = true;
+        grayscaleVolume.enabled = true;
+        yield return new WaitForSeconds(0.7f);
+        Vector3 newPlayerPosition = hitobject.transform.position;
+        hitobject.transform.position = player.transform.position;
+        player.transform.position = newPlayerPosition;
+        swapObject = null;
+        grabbedObject = null;
+        outlineScript.UnselectedHighlight();
+        selectedObject = false;
+        grayscaleVolume.enabled = false;
+        isGrayscale = false;
+        hitobject.layer = LayerMask.NameToLayer("MoveObject");
+        StartCoroutine(CooldownRewind());
     }
   /*  void StopVelocity(Rigidbody rb)
     {
